@@ -1,0 +1,34 @@
+{
+  "name": "Spac",
+  "description": "Software Pro-Active.",
+  "keywords": [
+    "pro-active",
+    "salud",
+    "health"
+  ],
+  "website": "https://spac.com/",
+  "repository": "https://github.com/cesaralonso/spac",
+  "logo": "https://spac.com/logo.svg",
+  "success_url": "/welcome",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "Performance-M"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
+}
